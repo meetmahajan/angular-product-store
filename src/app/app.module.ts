@@ -16,11 +16,13 @@ import { CartService } from './cart.service';
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
+      { path: 'shipping', component: ShippingComponent },
     ])
   ],
   declarations: [
@@ -32,7 +34,7 @@ import { CartService } from './cart.service';
     CartComponent,
     ShippingComponent
   ],
-  bootstrap: [ AppComponent ],
+  bootstrap: [AppComponent],
   providers: [CartService]
 })
 export class AppModule { }

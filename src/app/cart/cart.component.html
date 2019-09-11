@@ -3,7 +3,11 @@
     Empty Cart
   </button>
 </h3>
-
+<p>
+  <a routerLink='/shipping'>
+    Shipping Charges
+  </a>
+</p>
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>
