@@ -17,9 +17,14 @@ export class CartComponent implements OnInit {
     let total = 0;
     this.items = this.cartService.getItems();
     this.items.forEach(function(element){
-      console.log(+element.price);
       total = total+(+element.price);
     });
     this.subTotal = total;
+  }
+  clearCart(){
+    // console.log(item);
+    this.items = [];
+    this.subTotal = null;
+    alert('Cart is empty')
   }
 }

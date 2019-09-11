@@ -1,4 +1,8 @@
-<h3>Cart</h3>
+<h3>Cart
+  <button (click)="clearCart()">
+    Empty Cart
+  </button>
+</h3>
 
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
