@@ -8,18 +8,18 @@ import { CartService } from '../cart.service';
 })
 export class CartComponent implements OnInit {
   items;
-  total: number = 0;
+  subTotal;
   constructor(
     private cartService: CartService
   ) { }
 
   ngOnInit() {
+    let total = 0;
     this.items = this.cartService.getItems();
-  }
-  ngAfterViewInit() {
-    this.items.forEach(function (element) {
-      this.total = this.total + element.price;
+    this.items.forEach(function(element){
+      console.log(+element.price);
+      total = total+(+element.price);
     });
+    this.subTotal = total;
   }
-
 }

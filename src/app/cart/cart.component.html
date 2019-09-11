@@ -4,7 +4,7 @@
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>
 </div>
-<div>
+<div *ngIf="subTotal" class="cart-item">
   <span><b>Total : </b></span>
-  <span>{{ total }}</span>
+  <span>{{ subTotal | currency }}</span>
 </div>
